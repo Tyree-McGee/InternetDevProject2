@@ -5,9 +5,9 @@ const CartSchema = new mongoose.Schema({
         type: mongoose.ObjectId,
         ref: 'Customer'
     },
-    item: [{
+    items: [{
         type: mongoose.ObjectId,
-        ref: 'Item'
+        ref: 'Items'
     }]
 })
 

@@ -4,6 +4,7 @@ const CustomerSchema = new mongoose.Schema({
     firstName : String,
     lastName: String,
     email: String,
+    password:String,
     carts: [{
         type: mongoose.ObjectId,
         ref: 'Carts'
