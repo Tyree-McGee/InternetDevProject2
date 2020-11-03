@@ -65,8 +65,7 @@ const initCustomers = async () => {
         const customer = {
             firstName: customers[i][0],
             lastName: customers[i][1],
-            email: customers[i][2],
-            password: PASSWORD
+            email: customers[i][2]
         }
         const addedCustomer = await createCustomer(customer);
         if( i == 0){
@@ -130,7 +129,7 @@ const createCustomer = async (customer) => {
         firstName: customer.firstName,
         lastName: customer.lastName,
         email: customer.email,
-        //cart: newCart._id
+        password: PASSWORD
     }
     const newAdded = await CustomerModel.create(newCustomer);
     const newCart = await createCart(newAdded);
